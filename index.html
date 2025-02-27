@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickOrder - La tua gestione ordini semplificata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .cta-button:hover {
+            background: #0056b3;
+        }
+        .section {
+            padding: 40px 20px;
+            text-align: left;
+        }
+        .image-section img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .video-section iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+        }
+        .countdown {
+            font-size: 30px;
+            font-weight: bold;
+            color: #e60000;
+            margin-top: 20px;
+        }
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .features-list li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 QuickOrder è in arrivo!</h1>
+        <p>La nuova app che rivoluziona la gestione degli ordini, <br>rendendola più semplice, veloce ed efficiente.</p>
+        <p>Perfettamente integrata con Pegaso Gest, <br>per ottimizzare il tuo lavoro e far crescere il tuo business.</p>
+        <a href="#" class="cta-button">Richiedi informazioni al tuo commerciale</a>
+    </div>
+
+    <!-- Countdown Section -->
+    <div class="container">
+        <h2>⏰ Il lancio di QuickOrder è imminente!</h2>
+        <p>Non perdere l'occasione, il lancio ufficiale è tra:</p>
+        <div class="countdown" id="countdown"></div>
+    </div>
+
+    <div class="container section image-section">
+        <h2>📸 Guarda QuickOrder in azione</h2>
+        <img src="https://source.unsplash.com/900x500/?technology,app" alt="QuickOrder Screenshot">
+    </div>
+
+    <div class="container section video-section">
+        <h2>🎥 Scopri QuickOrder</h2>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="container section">
+        <h2>💡 Perché scegliere QuickOrder?</h2>
+        <ul class="features-list">
+            <li>✔ Facile e intuitiva: gestisci gli ordini in pochi tap</li>
+            <li>✔ Perfettamente integrata con Pegaso Gest: tutto sincronizzato in tempo reale</li>
+            <li>✔ Più efficienza, più risultati: ottimizza il lavoro e fai crescere il tuo business</li>
+            <li>✔ Supporto completo: assistenza clienti sempre a tua disposizione</li>
+            <li>✔ Ottimizzazione continua: aggiornamenti regolari per migliorare l'esperienza</li>
+        </ul>
+    </div>
+
+    <!-- Countdown Script -->
+    <script>
+        // Imposta la data del lancio
+        const launchDate = new Date("Mar 15, 2025 00:00:00").getTime();
+
+        const countdown = document.getElementById("countdown");
+
+        const interval = setInterval(function() {
+            const now = new Date().getTime();
+            const timeLeft = launchDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (timeLeft < 0) {
+                clearInterval(interval);
+                countdown.innerHTML = "Lancio avvenuto!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

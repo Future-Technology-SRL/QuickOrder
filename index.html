@@ -68,6 +68,26 @@
             font-size: 18px;
             margin-bottom: 10px;
         }
+        .stores {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .store-button {
+            margin: 0 15px;
+            width: 180px;
+            height: 50px;
+            background-size: cover;
+            background-position: center;
+            border: none;
+            cursor: pointer;
+        }
+        .app-store {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/60/App_Store_logo.png');
+        }
+        .google-play {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Play_Store_logo_2015.png');
+        }
     </style>
 </head>
 <body>
@@ -105,6 +125,16 @@
             <li>✔ Supporto completo: assistenza clienti sempre a tua disposizione</li>
             <li>✔ Ottimizzazione continua: aggiornamenti regolari per migliorare l'esperienza</li>
         </ul>
+    </div>
+
+     <!-- App Store & Google Play Section -->
+    <div class="container section">
+        <h2>📲 Disponibile su App Store e Google Play</h2>
+        <p>Scarica l'app quando sarà disponibile nei tuoi store preferiti.</p>
+        <div class="stores">
+            <button class="store-button app-store" onclick="window.open('https://apps.apple.com')"></button>
+            <button class="store-button google-play" onclick="window.open('https://play.google.com')"></button>
+        </div>
     </div>
 
     <!-- Countdown Script -->

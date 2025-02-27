@@ -88,6 +88,22 @@
         .google-play {
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Play_Store_logo_2015.png');
         }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+        
+        .screenshot {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
     </style>
 </head>
 <body>
@@ -106,9 +122,17 @@
     </div>
 
     <div class="container section image-section">
-        <h2>📸 Guarda QuickOrder in azione</h2>
-        <img src="https://source.unsplash.com/900x500/?technology,app" alt="QuickOrder Screenshot">
+    <h2>📸 Guarda QuickOrder in azione</h2>
+    <div class="gallery">
+        <img src="1.jpg" alt="Screenshot 1" class="screenshot">
+        <img src="2.jpg" alt="Screenshot 2" class="screenshot">
+        <img src="3.jpg" alt="Screenshot 3" class="screenshot">
+        <img src="4.jpg" alt="Screenshot 4" class="screenshot">
+        <img src="5.jpg" alt="Screenshot 5" class="screenshot">
+        <img src="6.jpg" alt="Screenshot 6" class="screenshot">
     </div>
+</div>
+
 
     <div class="container section video-section">
         <h2>🎥 Scopri QuickOrder</h2>

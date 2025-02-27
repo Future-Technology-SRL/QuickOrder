@@ -155,7 +155,31 @@
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Google_Play_Store_badge_IT.svg/2560px-Google_Play_Store_badge_IT.svg.png');
             background-repeat: no-repeat;
         }
+ /* Responsive */
+        @media (max-width: 1024px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .video-section iframe { height: 400px; }
+        }
 
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .container { padding: 20px; }
+            .cta-button { padding: 12px 25px; font-size: 16px; }
+            .video-section iframe { height: 300px; }
+            .stores { flex-direction: column; align-items: center; }
+            .store-button { width: 180px; height: 50px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.3rem; }
+            .cta-button { padding: 10px 20px; font-size: 14px; }
+            .video-section iframe { height: 250px; }
+            .gallery { grid-template-columns: 1fr; }
+            .countdown { font-size: 30px; }
+        }
     </style>
 </head>
 <body>
